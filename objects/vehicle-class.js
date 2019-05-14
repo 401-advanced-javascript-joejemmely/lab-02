@@ -1,7 +1,34 @@
 'use strict';
 
-class Car {}
+class Vehicle {
+  constructor(name) {
+    this.name = name;
+  }
 
-class Motorcycle {}
+  drive() {
+    return 'Moving Forward';
+  }
 
-module.exports = Car;
+  stop() {
+    return 'Stopping';
+  }
+}
+
+class Car extends Vehicle {
+  constructor(name) {
+    super(name);
+    this.wheels = 4;
+  }
+}
+
+class Motorcycle extends Vehicle {
+  constructor(name) {
+    super(name);
+    this.wheels = 2;
+  }
+  wheelie() {
+    return 'Wheee!';
+  }
+}
+
+module.exports = { Car, Motorcycle };
