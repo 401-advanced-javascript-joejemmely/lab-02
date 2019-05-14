@@ -1,6 +1,7 @@
 'use strict';
 
-class Car {
-}
+class Car {}
+
+class Motorcycle {}
 
 module.exports = Car;
