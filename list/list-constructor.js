@@ -50,10 +50,22 @@ List.prototype.unshift = function(...items) {
 };
 
 List.prototype.forEach = function(callback) {
+  if (typeof callback !== 'function') return undefined;
+
   for (let i = 0; i <= this.length - 1; i++) {
     callback(this.data[i], i);
   }
   return undefined;
+};
+
+List.prototype.map = function(callback) {
+  if (typeof callback !== 'function') return undefined;
+
+  let result = new List();
+  for (let i = 0; i <= this.length - 1; i++) {
+    result.push(callback(this[i], i));
+  }
+  return result;
 };
 
 module.exports = List;
