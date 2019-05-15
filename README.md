@@ -11,16 +11,30 @@
 
 ### Modules
 
-#### `vehicle-class.js`
+#### `vehicle-[class | constructor | factory].js`
 
 ##### Exported Values and Methods
 
-###### `foo(thing) -> string`
+###### `Car.drive() -> string`
 
-Usage Notes or examples
+###### `Car.stop() -> string`
 
-###### `bar(array) -> array`
+###### `Motorcycle.drive() -> string`
 
-Usage Notes or examples
+###### `Motorcycle.stop() -> string`
+
+###### `Motorcycle.wheelie() -> string`
+
+#### `list-[class | constructor | factory].js`
+
+##### Exported Values and Methods
+
+###### `List.push() -> int`
+
+###### `List.pop() -> removedItem || undefined`
+
+###### `List.shift() -> removedItem || undefined`
+
+###### `List.unshift() -> int`
 
 #### Tests
