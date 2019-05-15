@@ -13,22 +13,20 @@ function Vehicle(name) {
 }
 
 function Car(name) {
-  let car = Object.assign(Vehicle());
-  car.name = name;
-  car.wheels = 4;
-  return car;
+  this.name = name;
+  this.wheels = 4;
+  return Object.assign(this, Vehicle());
 }
 
 function Motorcycle(name) {
-  let motorcycle = Object.assign(Vehicle(), { wheelie });
-  motorcycle.name = name;
-  motorcycle.wheels = 2;
+  this.name = name;
+  this.wheels = 2;
 
   function wheelie() {
     return 'Wheee!';
   }
 
-  return motorcycle;
+  return Object.assign(this, Vehicle(), { wheelie });
 }
 
 module.exports = { Car, Motorcycle };
