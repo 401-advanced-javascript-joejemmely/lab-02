@@ -71,7 +71,7 @@ describe('Vehicles', () => {
         expect(motorcycle.stop()).toBeTruthy();
       });
 
-      it(`${type} (Motorcycle) cannot do a wheelie`, () => {
+      it(`${type} (Motorcycle) can do a wheelie`, () => {
         expect(motorcycle.wheelie()).toBeTruthy();
       });
     });
