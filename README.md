@@ -38,3 +38,22 @@
 ###### `List.unshift() -> int`
 
 #### Tests
+
+##### Vehicle
+
+- A car has 4 wheels
+- A car can drive
+- A car can stop
+- A car cannot do a wheelie
+
+- A motorcycle has 2 wheels
+- A motorcycle can drive
+- A motorcycle can stop
+- A motorcycle can do a wheelie
+
+##### List
+
+- Initialize a empty list
+- Update and return the length when new items are pushed
+- Pop and element out the list, update the length and return the element that was poped out
+- Update and re
