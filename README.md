@@ -1,4 +1,4 @@
-# LAB: 02
+# LAB - 02
 ## Classes, Inheritance, Functional Programming
 
 ## Before you begin
