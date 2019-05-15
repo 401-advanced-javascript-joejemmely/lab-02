@@ -1,6 +1,6 @@
 # LAB - 02
 
-## Project Name
+## Classes, Inheritance, Functional Programming
 
 ### Author: Joé Jemmely
 
@@ -11,7 +11,7 @@
 
 ### Modules
 
-#### `vehicle-[class | constructor | factory].js`
+#### `vehicle-[class|constructor|factory].js`
 
 ##### Exported Values and Methods
 
