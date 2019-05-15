@@ -1,8 +1,8 @@
 'use strict';
 
 // These 2 should be interchangeable!
-//const List = require('../list.js');
-const List = require('../list-constructor.js');
+const List = require('../list.js');
+//const List = require('../list-constructor.js');
 
 describe('List Data Structure', () => {
   it('starts with a length of -1 and an empty data set', () => {
@@ -26,9 +26,11 @@ describe('List Data Structure', () => {
     stuff.pop();
     expect(stuff.length).toEqual(1);
     expect(stuff.data[1]).toEqual(undefined);
+    stuff.pop();
+    expect(stuff.length).toBeFalsy();
   });
 
-  xit('remvoves the first item of the data set', () => {
+  it('removes the first item of the data set', () => {
     let stuff = new List();
     stuff.push('a');
     stuff.push('b');
@@ -36,9 +38,7 @@ describe('List Data Structure', () => {
     stuff.shift();
     expect(stuff.length).toEqual(1);
     stuff.shift();
-    expect(stuff.length).toEqual(0);
-    stuff.shift();
-    expect(stuff.length).toEqual(undefined);
+    expect(stuff.length).toBeFalsy();
   });
 
   it('pushes items to the beginning of the data set', () => {
@@ -47,5 +47,6 @@ describe('List Data Structure', () => {
     stuff.unshift('b');
     expect(stuff.length).toEqual(2);
     expect(stuff.data[0]).toEqual('b');
+    stuff.unshift('c', 'd');
   });
 });

@@ -7,23 +7,38 @@ class List {
   }
 
   push(item) {
-    // Add an item to the end
     this.data[this.length] = item;
     this.length++;
+    return this.length;
   }
 
   pop() {
-    let returnValue = this.data[this.length];
+    if (this.length == 0) return undefined;
+    const returnValue = this.data[this.length - 1];
     delete this.data[this.length - 1];
     this.length--;
     return returnValue;
   }
 
   shift() {
-    return this.length;
+    if (this.length == 0) return undefined;
+
+    // Save the return value
+    const returnValue = this.data[0];
+    delete this.data[0];
+    this.length--;
+
+    // Reasign values to the new index
+    for (let i = 0; i < this.length + 1; i++) {
+      this.data[i] = this.data[i + 1];
+    }
+
+    // Remove the last element at the previous index
+    delete this.data[this.length];
+    return returnValue;
   }
 
-  unshift(item) {
+  unshift(...items) {
     for (let item of items) {
       for (let i = this.length; i > 0; i--) {
         this.data[i] = this.data[i - 1];
@@ -35,7 +50,7 @@ class List {
     return this.length;
   }
 
-  forEach() {
+  forEach(callback) {
     for (let i = 0; i <= this.length - 1; i++) {
       callback(this.data[i], i);
     }
