@@ -7,7 +7,7 @@
 ### Links and Resources
 
 - [submission PR](https://github.com/401-advanced-javascript-joejemmely/lab-02/pull/1)
-- [travis](http://xyz.com)
+- [travis](https://travis-ci.com/401-advanced-javascript-joejemmely/lab-02/builds/111842177)
 
 ### Modules
 
@@ -24,7 +24,3 @@ Usage Notes or examples
 Usage Notes or examples
 
 #### Tests
-
-- How do you run tests?
-- What assertions were made?
-- What assertions need to be / should be made?
