@@ -25,7 +25,7 @@
 
 ###### `Motorcycle.wheelie() -> string`
 
-#### `list-[class|constructor].js`
+#### `list-[constructor].js`
 
 ##### Exported Values and Methods
 
